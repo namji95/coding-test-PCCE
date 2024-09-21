@@ -12,9 +12,17 @@ public class PCCE_기출문제_1번_출력 {
     310
      */
 
+//    String msg = "Spring is beginning"; // 데이터 빈칸
+//    int val1 = 3; // 데이터 빈칸
+//    String val2 = val1 + ""; // 데이터 빈칸
+//
+//    System.out.println(msg);
+//    System.out.println(val1 + 10);
+//    System.out.println(val2 + "10");
+
     String msg = "Spring is beginning"; // 데이터 빈칸
     int val1 = 3; // 데이터 빈칸
-    String val2 = val1 + ""; // 데이터 빈칸
+    String val2 = String.valueOf(val1); // 데이터 빈칸
 
     System.out.println(msg);
     System.out.println(val1 + 10);
