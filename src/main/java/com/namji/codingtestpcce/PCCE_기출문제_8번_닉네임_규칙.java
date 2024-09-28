@@ -37,6 +37,35 @@ public class PCCE_기출문제_8번_닉네임_규칙 {
     - 닉네임 "GO"는 4, 5 단계를 거쳐 "G0oo"가 됩니다.
       - "GO" -> "G0" -> "G0oo"
      */
+//    String nickname = "GO";
+//    String answer = "";
+//    for(int i=0; i<nickname.length(); i++){
+//      if(nickname.charAt(i) == 'l'){
+//        answer += "I";
+//      }
+//      else if(nickname.charAt(i) == 'w'){
+//        answer += "vv";
+//      }
+//      else if(nickname.charAt(i) == 'W'){
+//        answer += "VV";
+//      }
+//      else if(nickname.charAt(i) == 'O'){
+//        answer += "0";
+//      }
+//      else{
+//        answer += nickname.charAt(i);
+//      }
+//    }
+//
+//    while (answer.length() < 4) {
+//      answer += "o";
+//    }
+//    if(answer.length() > 8){
+//      answer = answer.substring(0, 8);
+//    }
+//
+//    System.out.println(answer);
+
     String nickname = "GO";
     String answer = "";
     for(int i=0; i<nickname.length(); i++){
@@ -57,8 +86,8 @@ public class PCCE_기출문제_8번_닉네임_규칙 {
       }
     }
 
-    while (answer.length() < 4) {
-      answer += "o";
+    if (answer.length() < 3) {
+      answer += "o".repeat(4-answer.length());
     }
     if(answer.length() > 8){
       answer = answer.substring(0, 8);
