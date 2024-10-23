@@ -13,7 +13,7 @@ public class PCCE_기출문제_8번_닉네임_규칙 {
     이때 닉네임을 변경하는 규칙은 다음과 같으며 첫 번째 규칙부터 순서대로 적용합니다.
     1. 소문자 l을 대문자 I로 변경합니다.
     2. 소문자 w를 두 개의 소문자 v, 즉 vv로 변경합니다.
-    3. 대문자 W를 두 개의 대문자 V, 즉 VV로 변경합니다.
+    3. 대문자 W를 두 개의 대문자 V, 즉 VV로 변 경합니다.
     4. 대문자 O를 숫자 0으로 변경합니다.
     5. 수정된 닉네임의 길이가 4 미만일 경우 뒤에 소문자 o를 길이가 4가 될때까지 이어붙입니다.
     6. 수정된 닉네임의 길이가 8보다 클 경우 8번째 문자까지만 사용합니다.
@@ -37,35 +37,6 @@ public class PCCE_기출문제_8번_닉네임_규칙 {
     - 닉네임 "GO"는 4, 5 단계를 거쳐 "G0oo"가 됩니다.
       - "GO" -> "G0" -> "G0oo"
      */
-//    String nickname = "GO";
-//    String answer = "";
-//    for(int i=0; i<nickname.length(); i++){
-//      if(nickname.charAt(i) == 'l'){
-//        answer += "I";
-//      }
-//      else if(nickname.charAt(i) == 'w'){
-//        answer += "vv";
-//      }
-//      else if(nickname.charAt(i) == 'W'){
-//        answer += "VV";
-//      }
-//      else if(nickname.charAt(i) == 'O'){
-//        answer += "0";
-//      }
-//      else{
-//        answer += nickname.charAt(i);
-//      }
-//    }
-//
-//    while (answer.length() < 4) {
-//      answer += "o";
-//    }
-//    if(answer.length() > 8){
-//      answer = answer.substring(0, 8);
-//    }
-//
-//    System.out.println(answer);
-
     String nickname = "GO";
     String answer = "";
     for(int i=0; i<nickname.length(); i++){
@@ -86,13 +57,42 @@ public class PCCE_기출문제_8번_닉네임_규칙 {
       }
     }
 
-    if (answer.length() < 3) {
-      answer += "o".repeat(4-answer.length());
+    while (answer.length() < 4) {
+      answer += "o";
     }
     if(answer.length() > 8){
       answer = answer.substring(0, 8);
     }
 
     System.out.println(answer);
+
+//    String nickname = "GO";
+//    String answer = "";
+//    for(int i=0; i<nickname.length(); i++){
+//      if(nickname.charAt(i) == 'l'){
+//        answer += "I";
+//      }
+//      else if(nickname.charAt(i) == 'w'){
+//        answer += "vv";
+//      }
+//      else if(nickname.charAt(i) == 'W'){
+//        answer += "VV";
+//      }
+//      else if(nickname.charAt(i) == 'O'){
+//        answer += "0";
+//      }
+//      else{
+//        answer += nickname.charAt(i);
+//      }
+//    }
+//
+//    if (answer.length() < 3) {
+//      answer += "o".repeat(4-answer.length());
+//    }
+//    if(answer.length() > 8){
+//      answer = answer.substring(0, 8);
+//    }
+//
+//    System.out.println(answer);
   }
 }
